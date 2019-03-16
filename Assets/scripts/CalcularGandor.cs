@@ -118,27 +118,6 @@ public class CalcularGandor : MonoBehaviour {
 
     }
 
-    /*public void imprimirLista()
-    {
-        Debug.Log(posiblesGanes[0]);
-        Debug.Log(posiblesGanes[1]);
-        Debug.Log(posiblesGanes[2]);
-        Debug.Log(posiblesGanes[3]);
-        Debug.Log(posiblesGanes[4]);
-        Debug.Log(posiblesGanes[5]);
-        Debug.Log(posiblesGanes[6]);
-        Debug.Log(posiblesGanes[7]);
-        Debug.Log(posiblesCombinaciones[0, 0]);
-        Debug.Log(posiblesCombinaciones[0, 1]);
-        Debug.Log(posiblesCombinaciones[0, 2]);
-        Debug.Log(posiblesCombinaciones[1, 0]);
-        Debug.Log(posiblesCombinaciones[1, 1]);
-        Debug.Log(posiblesCombinaciones[1, 2]);
-        Debug.Log(posiblesCombinaciones[2, 0]);
-        Debug.Log(posiblesCombinaciones[2, 1]);
-        Debug.Log(posiblesCombinaciones[2, 2]);
-    }*/
-
     public void gane()
     {
         for(int contador=0; contador<posiblesGanes.Length;++contador)
@@ -213,13 +192,5 @@ public class CalcularGandor : MonoBehaviour {
             establecerTurno();
         }
 
-        /*if (ganador == "gano tacha")
-        {
-            Debug.Log("tacha");
-        }
-        else if(ganador=="gano circulo")
-        {
-            Debug.Log("circulo");
-        }*/
 	}
 }
