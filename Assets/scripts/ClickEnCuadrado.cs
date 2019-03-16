@@ -22,7 +22,7 @@ public class ClickEnCuadrado : MonoBehaviour {
     private void OnMouseDown()
     {
         primerClick = true;
-        if (primerClick && repeticion == false)
+        if (primerClick && repeticion == false && scriptCalcularGanador.yaHayGanador==false)
         {
             scripGeneradorIconos.crearIcono();
             optenerCordenadas();

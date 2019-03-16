@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CalcularGandor : MonoBehaviour {
     public string[,] posiblesCombinaciones = new string[3, 3];
@@ -10,9 +11,15 @@ public class CalcularGandor : MonoBehaviour {
     public string[] posiblesGanes=new string[8];
     public string ganador="";
     public int contadorTurnos = 0;
+    public bool yaHayGanador;
+    public GameObject ganadorTextoGo;
+    public Text txtGanador;
+    public GameObject turnosTextoGo;
+    public Text txtTurnos;
 	// Use this for initialization
 	void Start () {
-       
+        txtGanador = ganadorTextoGo.gameObject.GetComponent<Text>();
+        txtTurnos = turnosTextoGo.gameObject.GetComponent<Text>();
 	}
 
     public void llenarArray(string nombreCuadradoClick)
@@ -138,16 +145,50 @@ public class CalcularGandor : MonoBehaviour {
         {
             if(posiblesGanes[contador]==(""+"ttt"))
             {
-                ganador = "gano tacha";
+                ganador = "Gano Tacha";
+                yaHayGanador = true;
             }
             else if(posiblesGanes[contador] == (""+"ccc"))
             {
-                ganador = "gano circulo";
+                ganador = "Gano Circulo";
+                yaHayGanador = true;
             }
         }
     }
 
-    
+    public void textoGanador()
+    {
+        if (ganador != "")
+        {
+            txtGanador.text = ganador;
+        }
+        else
+        {
+            txtGanador.text = "Empate";
+        }
+        ganadorTextoGo.SetActive(true);
+    }
+
+    public void establecerTurno()
+    {
+        switch(contadorTurnos)
+        {
+            case 0:
+            case 2:
+            case 4:
+            case 6:
+            case 8:
+                txtTurnos.text = "Turno De Circulo";
+                break;
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+                txtTurnos.text = "Turno De Tacha";
+                break;
+
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -157,13 +198,28 @@ public class CalcularGandor : MonoBehaviour {
             calcularGanador();
             gane();
         }
-        if (ganador == "gano tacha")
+        if(yaHayGanador)
+        {
+            textoGanador();
+            turnosTextoGo.SetActive(false);
+        }
+        else if(contadorTurnos==9)
+        {
+            textoGanador();
+            turnosTextoGo.SetActive(false);
+        }
+        if(!yaHayGanador)
+        {
+            establecerTurno();
+        }
+
+        /*if (ganador == "gano tacha")
         {
             Debug.Log("tacha");
         }
         else if(ganador=="gano circulo")
         {
             Debug.Log("circulo");
-        }
+        }*/
 	}
 }
