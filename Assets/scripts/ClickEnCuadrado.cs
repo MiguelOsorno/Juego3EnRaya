@@ -9,9 +9,14 @@ public class ClickEnCuadrado : MonoBehaviour {
     public ColocarIcono scripGeneradorIconos;
     private float posicionX;
     private float posicionY;
-	// Use this for initialization
-	void Start () {
+    public string nombreDeCuadrado;
+   
+    public GameObject calcularGanadorGo;
+    public CalcularGandor scriptCalcularGanador;
+    // Use this for initialization
+    void Start () {
         scripGeneradorIconos = generadorIconos.gameObject.GetComponent<ColocarIcono>();
+        scriptCalcularGanador = calcularGanadorGo.gameObject.GetComponent<CalcularGandor>();
 	}
 
     private void OnMouseDown()
@@ -21,6 +26,7 @@ public class ClickEnCuadrado : MonoBehaviour {
         {
             scripGeneradorIconos.crearIcono();
             optenerCordenadas();
+           
             repeticion = true;
         }
     }
@@ -31,7 +37,10 @@ public class ClickEnCuadrado : MonoBehaviour {
     {
         posicionX = this.gameObject.transform.position.x;
         posicionY = this.gameObject.transform.position.y;
+        nombreDeCuadrado = this.gameObject.name;
         scripGeneradorIconos.posicionarIcono(posicionX, posicionY);
+        ++scriptCalcularGanador.contadorTurnos;
+        scriptCalcularGanador.llenarArray(nombreDeCuadrado);
     }
 
     // Update is called once per frame

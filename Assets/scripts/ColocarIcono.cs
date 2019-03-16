@@ -11,7 +11,6 @@ public class ColocarIcono : MonoBehaviour {
     public bool turnoTacha;
 	// Use this for initialization
 	void Start () {
-		
 	}
 
     public void crearIcono()

@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 7329138}
   - component: {fileID: 7329139}
   m_Layer: 0
-  m_Name: 'cuadrado '
+  m_Name: cuadrado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,8 +229,9 @@ MonoBehaviour:
   repeticion: 0
   generadorIconos: {fileID: 2007729864}
   scripGeneradorIconos: {fileID: 0}
-  posicionX: 0
-  posicionY: 0
+  nombreDeCuadrado: 
+  calcularGanadorGo: {fileID: 377152914}
+  scriptCalcularGanador: {fileID: 0}
 --- !u!1 &69521341
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +392,7 @@ GameObject:
   - component: {fileID: 191075842}
   - component: {fileID: 191075843}
   m_Layer: 0
-  m_Name: cuadrado (8)
+  m_Name: cuadrado6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -453,7 +454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 834214701}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &191075842
 BoxCollider2D:
@@ -495,8 +496,9 @@ MonoBehaviour:
   repeticion: 0
   generadorIconos: {fileID: 2007729864}
   scripGeneradorIconos: {fileID: 0}
-  posicionX: 0
-  posicionY: 0
+  nombreDeCuadrado: 
+  calcularGanadorGo: {fileID: 377152914}
+  scriptCalcularGanador: {fileID: 0}
 --- !u!1 &228557598
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +572,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &377152914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 377152916}
+  - component: {fileID: 377152915}
+  m_Layer: 0
+  m_Name: Ganador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &377152915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 377152914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4484af993347e4392d2ddae6cd5bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posicionY: 0
+  posicionX: 0
+  vecesIconos: 0
+  posiblesGanes:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  ganador: 
+  contadorTurnos: 0
+--- !u!4 &377152916
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 377152914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.11, y: 6.2, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &380917131
 GameObject:
@@ -812,7 +868,7 @@ GameObject:
   - component: {fileID: 796303597}
   - component: {fileID: 796303598}
   m_Layer: 0
-  m_Name: cuadrado (7)
+  m_Name: cuadrado5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -874,7 +930,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 834214701}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &796303597
 BoxCollider2D:
@@ -916,8 +972,9 @@ MonoBehaviour:
   repeticion: 0
   generadorIconos: {fileID: 2007729864}
   scripGeneradorIconos: {fileID: 0}
-  posicionX: 0
-  posicionY: 0
+  nombreDeCuadrado: 
+  calcularGanadorGo: {fileID: 377152914}
+  scriptCalcularGanador: {fileID: 0}
 --- !u!1 &834214700
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,12 +1003,12 @@ Transform:
   - {fileID: 7329137}
   - {fileID: 1954866010}
   - {fileID: 1252527399}
-  - {fileID: 1473036208}
-  - {fileID: 1294415634}
-  - {fileID: 1518112207}
   - {fileID: 993315237}
   - {fileID: 796303596}
   - {fileID: 191075841}
+  - {fileID: 1473036208}
+  - {fileID: 1294415634}
+  - {fileID: 1518112207}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -999,7 +1056,7 @@ GameObject:
   - component: {fileID: 993315238}
   - component: {fileID: 993315239}
   m_Layer: 0
-  m_Name: cuadrado (6)
+  m_Name: cuadrado4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1061,7 +1118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 834214701}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &993315238
 BoxCollider2D:
@@ -1103,8 +1160,9 @@ MonoBehaviour:
   repeticion: 0
   generadorIconos: {fileID: 2007729864}
   scripGeneradorIconos: {fileID: 0}
-  posicionX: 0
-  posicionY: 0
+  nombreDeCuadrado: 
+  calcularGanadorGo: {fileID: 377152914}
+  scriptCalcularGanador: {fileID: 0}
 --- !u!1 &1184911069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1249,7 @@ GameObject:
   - component: {fileID: 1252527400}
   - component: {fileID: 1252527401}
   m_Layer: 0
-  m_Name: cuadrado (2)
+  m_Name: cuadrado3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1295,8 +1353,9 @@ MonoBehaviour:
   repeticion: 0
   generadorIconos: {fileID: 2007729864}
   scripGeneradorIconos: {fileID: 0}
-  posicionX: 0
-  posicionY: 0
+  nombreDeCuadrado: 
+  calcularGanadorGo: {fileID: 377152914}
+  scriptCalcularGanador: {fileID: 0}
 --- !u!1 &1294415632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,7 +1368,7 @@ GameObject:
   - component: {fileID: 1294415635}
   - component: {fileID: 1294415636}
   m_Layer: 0
-  m_Name: cuadrado (4)
+  m_Name: cuadrado8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1371,7 +1430,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 834214701}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1294415635
 BoxCollider2D:
@@ -1413,8 +1472,9 @@ MonoBehaviour:
   repeticion: 0
   generadorIconos: {fileID: 2007729864}
   scripGeneradorIconos: {fileID: 0}
-  posicionX: 0
-  posicionY: 0
+  nombreDeCuadrado: 
+  calcularGanadorGo: {fileID: 377152914}
+  scriptCalcularGanador: {fileID: 0}
 --- !u!1 &1473036206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,7 +1487,7 @@ GameObject:
   - component: {fileID: 1473036209}
   - component: {fileID: 1473036210}
   m_Layer: 0
-  m_Name: cuadrado (3)
+  m_Name: cuadrado7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1489,7 +1549,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 834214701}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1473036209
 BoxCollider2D:
@@ -1531,8 +1591,9 @@ MonoBehaviour:
   repeticion: 0
   generadorIconos: {fileID: 2007729864}
   scripGeneradorIconos: {fileID: 0}
-  posicionX: 0
-  posicionY: 0
+  nombreDeCuadrado: 
+  calcularGanadorGo: {fileID: 377152914}
+  scriptCalcularGanador: {fileID: 0}
 --- !u!1 &1518112205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1545,7 +1606,7 @@ GameObject:
   - component: {fileID: 1518112208}
   - component: {fileID: 1518112209}
   m_Layer: 0
-  m_Name: cuadrado (5)
+  m_Name: cuadrado9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1607,7 +1668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 834214701}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1518112208
 BoxCollider2D:
@@ -1649,8 +1710,9 @@ MonoBehaviour:
   repeticion: 0
   generadorIconos: {fileID: 2007729864}
   scripGeneradorIconos: {fileID: 0}
-  posicionX: 0
-  posicionY: 0
+  nombreDeCuadrado: 
+  calcularGanadorGo: {fileID: 377152914}
+  scriptCalcularGanador: {fileID: 0}
 --- !u!1 &1954866008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,7 +1725,7 @@ GameObject:
   - component: {fileID: 1954866011}
   - component: {fileID: 1954866012}
   m_Layer: 0
-  m_Name: cuadrado (1)
+  m_Name: cuadrado2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1767,8 +1829,9 @@ MonoBehaviour:
   repeticion: 0
   generadorIconos: {fileID: 2007729864}
   scripGeneradorIconos: {fileID: 0}
-  posicionX: 0
-  posicionY: 0
+  nombreDeCuadrado: 
+  calcularGanadorGo: {fileID: 377152914}
+  scriptCalcularGanador: {fileID: 0}
 --- !u!1 &1968431128
 GameObject:
   m_ObjectHideFlags: 0
